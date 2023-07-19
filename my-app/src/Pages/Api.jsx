@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../component/Header'
 
 const Api = () => {
   return (
-    <div>Api</div>
+   <>
+   <Header/>
+   API page
+   </>
   )
 }
 
