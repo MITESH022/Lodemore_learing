@@ -1,0 +1,84 @@
+import React, { useEffect, useState } from 'react'
+import Header from '../component/Header'
+
+const Menu = () => {
+          
+            const [items , setitem] = useState([]);
+
+
+            const Url = `https://dummyjson.com/products/categories`;
+            console.log(Url);
+
+            useEffect(()=>{
+
+              catagorproducts();
+
+            },[]);
+
+
+            const catagorproducts =async () =>{
+                    try {
+                            const res = await fetch(Url);
+                            const catdata = await res.json();
+                            console.log(catdata);
+                            setitem(catdata);
+                    } catch (error) {
+                      console.log(error,"catagorproducts");
+
+                    }
+
+            }
+  return (
+    <>
+    <Header/>
+    <h1 className='mt-2 text-center '>Our Best products</h1>
+    <div className='mt-2 menu-tabs container'>
+          <div className='menu-tab d-flex justify-content-around'>
+            <button className='btn btn-warning'>smartphone</button>
+            <button className='btn btn-warning'>smartphone</button>
+            <button className='btn btn-warning'>smartphone</button>
+            <button className='btn btn-warning'>smartphone</button>
+            <button className='btn btn-warning'>smartphone</button>
+
+          </div>
+    </div>
+
+    <>
+    <div className='container'>
+        <div className='row gy-3 my-3'>
+
+          {
+
+              items.map((elem)=> {
+
+                return(
+                <div className='col-md-3 col-sm-6' >
+                <div className='card' style={{ width: "20rem",height:"15rem" }}>
+                  <img src="" className='card-img-top' alt='no product' style={{height:"10rem"}}/>
+                  <div className='card-body'>
+                    <h5 className='card-title'>title</h5>
+                    <p className='card-text'>
+                     description
+                    </p>
+                    <a href='#' className='btn btn-primary'>
+                      Go somewhere
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+               ) })
+           }
+              
+
+
+        </div>
+      </div>
+
+
+    </>
+    </>
+  )
+}
+
+export default Menu
