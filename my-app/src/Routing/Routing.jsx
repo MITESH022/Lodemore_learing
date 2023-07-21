@@ -3,6 +3,7 @@ import {  Route, Routes } from "react-router-dom";
 import Home from '../Pages/Home';
 import Api from '../Pages/Api';
 import Error from '../Pages/Error';
+import Menu from '../Pages/Menu';
 const Routing = () => {
   return (
         <>
@@ -10,6 +11,7 @@ const Routing = () => {
          <Routes>
          <Route path='/' element={ <Home/>} />
          <Route path='/api' element={ <Api/>} />
+         <Route path='/menu' element={ <Menu/>} />
          <Route path='*' element={ <Error/>} />
          </Routes>
         </>
