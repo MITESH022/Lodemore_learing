@@ -8,7 +8,7 @@ const Menu = () => {
 
   const [items, setitem] = useState(Menuapi);
   const [catItems, setCatItems] = useState(allcatValues);
-  console.log(catItems, "");
+  // console.log(catItems, "");
 
   const filterItem = (categitem) => {
 
