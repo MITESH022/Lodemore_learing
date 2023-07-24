@@ -3,7 +3,9 @@ import Header from '../component/Header'
 import questions from '../API/Questions'
 import Singalquestion from '../component/Singalquestion';
 const Accordions = () => {
-    const [Question, setQuestion] = useState(questions);
+    // const [Question, setQuestion] = useState(questions);
+    const [showInfo, setShowInfo] = useState(false);
+
     
   return (
     <>
@@ -14,11 +16,15 @@ const Accordions = () => {
         <section className='container'>
             <h1>Questions</h1>
             {
-                Question.map((que)=>{
-                    return <Singalquestion key={que.id} {...que}>
-                        
+                questions.map((que)=>{
+                 return <Singalquestion key={que.id} {...que}
+                //   showInfo={showInfo}
+                //    setShowInfo={setShowInfo}
+                   
+                   />
+
                 
-                    </Singalquestion>
+                    // </Singalquestion>
 
                 })
             }
