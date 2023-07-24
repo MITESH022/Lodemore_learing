@@ -23,6 +23,9 @@ const Header = () => {
         <li className="nav-item">
           <Link to="/paragraph_generator" className="nav-link" href="#services">paragenerator</Link>
         </li>
+        <li className="nav-item">
+          <Link to="/accordion" className="nav-link" href="#services">Accordions</Link>
+        </li>
        
       
       </ul>

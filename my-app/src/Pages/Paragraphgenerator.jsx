@@ -15,6 +15,7 @@ const Paragraphgenerator = () => {
             const amount = parseInt(count)
             // console.log( typeof amount);
             setParaText(Text.slice(0,amount));
+            
         }
 
 
