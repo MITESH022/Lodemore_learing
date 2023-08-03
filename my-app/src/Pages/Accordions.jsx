@@ -3,10 +3,19 @@ import Header from '../component/Header'
 import questions from '../API/Questions'
 import Singalquestion from '../component/Singalquestion';
 const Accordions = () => {
-    // const [Question, setQuestion] = useState(questions);
-    const [showInfo, setShowInfo] = useState(false);
+    const [Question, setQuestion] = useState(questions);
+    // const [showInfo, setShowInfo] = useState(false);
 
-    
+      const handleOpen = (id) =>{
+
+            // const changeQuestion = Question.map((item)=>item.id  === id ? {...item,isOpen:true}: {...item,isOpen:false})
+            // setQuestion(changeQuestion);
+
+            // setQuestion((perv)=>perv.map((item)=>item.id  === id ? {...item,isOpen:true}: {...item,isOpen:false}))
+            setQuestion((perv)=>perv.map((item)=>item.id  === id ? {...item,isOpen:!item.isOpen}: {...item,isOpen:false}))
+            
+      }    
+
   return (
     <>
     <Header/>
@@ -16,10 +25,9 @@ const Accordions = () => {
         <section className='container'>
             <h1>Questions</h1>
             {
-                questions.map((que)=>{
+                Question.map((que)=>{
                  return <Singalquestion key={que.id} {...que}
-                //   showInfo={showInfo}
-                //    setShowInfo={setShowInfo}
+                  handleOpen={handleOpen}
                    
                    />
 
