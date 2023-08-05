@@ -7,6 +7,7 @@ import Menu from '../Pages/Menu';
 import Paragraphgenerator from '../Pages/Paragraphgenerator';
 import Accordions from '../Pages/Accordions';
 import Tour from '../Pages/Tour';
+import Tabs from '../Pages/Tabs';
 const Routing = () => {
   return (
         <>
@@ -18,6 +19,7 @@ const Routing = () => {
          <Route path='/paragraph_generator' element={ <Paragraphgenerator/>} />
          <Route path='/accordion' element={ <Accordions/>} />
          <Route path='/tour' element={ <Tour/>} />
+         <Route path='/tabs' element={ <Tabs/>} />
          <Route path='*' element={ <Error/>} />
          </Routes>
         </>
