@@ -5,7 +5,7 @@ const Paragraphgenerator = () => {
 
         const [count , setCount] = useState(1);
         const [Paratext ,setParaText] = useState([])
-        // console.log(Text);
+        console.log(Text);
         // console.log(Paratext);
 
         const handlesubmit = (e) => {
@@ -21,9 +21,9 @@ const Paragraphgenerator = () => {
                                 
             }
 
-            if(count >= 8)
+            if(count >9)
             {
-                    alert("plz enter less than 8");
+                    alert("plz enter less than 9");
                     return;
             }
             // console.log( typeof amount);
