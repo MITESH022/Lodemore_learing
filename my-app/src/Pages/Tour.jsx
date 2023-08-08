@@ -15,9 +15,10 @@ const Tour = () => {
   }, []);
 
   const removeTour = (id) => {
-    const newtours = tours.filter((tour) => tour.id !== id);
+    const newtours = tours.filter((tour) => tour.id !== id );
     setTours(newtours);
   };
+  
 
   const fetchTours = async () => {
     setisLoding(true);
@@ -60,7 +61,7 @@ const Tour = () => {
   return (
     <>  
 
-      
+      {/* {isLoding ? (<> </> ):( <>{t===0?():()} </>)} */}
       {isLoding ? (
         <Loading />
       ) : (
