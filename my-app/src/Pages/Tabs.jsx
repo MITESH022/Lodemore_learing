@@ -20,7 +20,7 @@ const Tabs = () => {
 
             const fetchjob = async() =>{
                 
-                      
+                        // isLoding(true);  //  ye na likhe to bhi kaya 
                     try {
                         const response = await fetch(API);
                         const newJobs = await response.json();
